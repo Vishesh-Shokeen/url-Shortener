@@ -1,0 +1,643 @@
+:root {
+
+  --pri-Cyan: hsl(180, 66%, 49%);
+  --pri-dark-violet: hsl(257, 27%, 26%);
+
+  --sec-red: hsl(0, 87%, 67%);
+
+  --neu-gray: hsl(0, 0%, 75%);
+  --neu-grayish-violet: hsl(257, 7%, 63%);
+  --neu-vd-blue: hsl(255, 11%, 22%);
+  --neu-vd-violet: hsl(260, 8%, 14%);
+
+  --FF: 'Poppins', serif;
+  --fw500: 500;
+  --fw700: 700;
+
+  --FS: 18px;
+
+}
+
+
+
+/* RESET */
+
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+form,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+/* xxxxx */
+
+body {
+  font-family: var(--FF);
+  font-size: var(--FS);
+  color: var(--neu-gray);
+  background-color: hsl(0, 0%, 75%,.3);
+}
+
+
+
+/*HEADER*/
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  padding: 1rem;
+
+}
+
+
+
+/*NAV*/
+nav {
+  font-weight: 700;
+  padding: 1rem;
+  flex: 1;
+}
+
+
+
+/*UNORDERED LIST*/
+ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+/*LIST-ITEM*/
+li {
+  margin: 0 1rem;
+}
+
+
+.Login {
+  margin-left: auto;
+}
+
+
+.btn {
+  background-color: var(--pri-Cyan);
+  color: white;
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+
+/*MENU-TOGGLE*/
+.toggle {
+  transform: translateY(0%);
+}
+
+
+/* Hamburger menu */
+@media (max-width:500px) {
+
+  /*HEADER*/
+  .header {
+    justify-content: space-between;
+  }
+
+
+
+  /*MENU-ICON*/
+  .hamburgerMenu {
+    font-size: 2rem;
+    color: var(--neu-grayish-violet);
+  }
+
+
+
+  /*NAV*/
+  nav {
+    position: absolute;
+    top: 5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+
+    border-radius: 10px;
+    background-color: var(--pri-dark-violet);
+    color: white;
+
+    transform: translateY(-200%);
+    transition: transform 200ms ease-in;
+  }
+
+
+
+  /*UNORDERED LIST*/
+  ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+
+/*LIST-ITEM*/
+  li {
+    margin: .8rem 0;
+  }
+
+  hr {
+    border: 1px solid hsl(0, 0%, 75%, .1);
+  }
+
+  .Login {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    background-color: var(--pri-Cyan);
+    padding: .5rem 0;
+    border-radius: 1rem;
+  }
+
+
+}
+
+
+@media(min-width:501px) {
+
+  .hamburgerMenu {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+/* ******** */
+/*Intro Div*/
+.introDiv{
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 8rem;
+}
+
+.introDiv > picture{
+  grid-row: 1;
+}
+
+
+.introDiv > div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: .5rem;
+}
+
+
+
+
+.title{
+  color: var(--neu-vd-blue);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.sub-title{
+  margin: 1rem 0;
+}
+
+
+.introDiv  button{
+padding: .5rem 2rem;
+border-radius: 2rem;
+}
+
+
+
+
+
+
+
+/*Shorten Link*/
+.linkDiv{
+  margin: 0  1rem;
+  margin-top: -2rem;
+  border-radius: 10px;
+
+
+  background: url(./assets/images/bg-shorten-mobile.svg);
+  background-size: cover;
+  background-color: var(--pri-dark-violet);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem;
+}
+
+
+.linkInput{
+  border-radius: 10px;
+  padding: .5rem ;
+}
+
+
+.pal{
+  display: none;
+  color: rgb(237, 122, 122);
+  font-size: .8rem;
+}
+
+
+
+.linkDiv .btn{
+  border-radius: 10px;
+  font-weight: var(--fw700);
+}
+
+
+
+
+
+.outPutBox{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  margin: 1rem;
+  padding: 1rem;
+
+  border-radius: 5px;
+}
+
+
+.userInput{
+  color: var(--neu-vd-blue);
+}
+
+.shortLink{
+  color: var(--pri-Cyan);
+  margin-right: 1rem;
+}
+
+.copybtn{
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+
+
+/*Advanced Statistics*/
+.flexwrap{
+  text-align: center;
+}
+
+.flexwrap > h2{
+  color: var(--neu-vd-blue);
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/*Stats Div*/
+.stats{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin: 4rem 0;
+  padding: 1rem;
+}
+
+
+
+
+/*Stat card*/
+.stat{
+  position: relative;
+
+  background-color: white;
+
+  padding: 1rem;
+}
+
+
+
+
+/*stat title*/
+.stat>h3{
+  color: var(--neu-vd-violet);
+  margin-top: 3rem;
+}
+
+
+
+/*Stat Info*/
+.stat>p{
+margin: 2rem 0;
+}
+
+/*Stat Img*/
+.stat > img{
+  position: absolute;
+  top: -2em;
+  left: 40%;
+  background-color: var(--pri-dark-violet);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+
+
+
+
+
+
+
+/*Boost Div*/
+.boostDiv{
+  background: url(./assets/images/bg-boost-mobile.svg);
+  background-color: var(--pri-dark-violet);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 6rem 0;
+}
+
+
+
+
+/*Boost title*/
+.boostDiv > h3 {
+  color: white;
+}
+
+
+
+/*BoostDiv btn*/
+.boostDiv > button{
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+}
+
+
+/*Footer*/
+footer{
+  background-color: var(--neu-vd-violet);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*Footer logo*/
+footer > img {
+  margin-top: 2rem ;
+}
+
+
+
+/*Footer list Div*/
+.flex-Div > div{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+
+/*Footer list div title*/
+.flex-Div > div > h3{
+  color: white;
+  margin-bottom: 1rem;
+}
+
+
+
+/*Footer icons*/
+.iconDiv{
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+
+
+
+
+
+@media (min-width:1200px) {
+  
+
+
+  .header{
+    background-color: white;
+    padding: 0 6rem;
+  }
+
+
+  .introDiv{
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+
+    padding: 0 6rem;
+
+    padding-bottom: 10rem;
+  }
+
+
+  .introDiv > div{
+    grid-row: 1/2;
+
+    align-items: start;
+    text-align: start;
+  }
+
+  .title{
+    font-size: 6rem;
+    margin-top: 4rem;
+
+  }
+
+  .sub-title{
+  max-width: 40ch;
+  font-size: 1.5rem;
+  }
+
+
+
+
+.linkDiv{
+  flex-direction: row;
+  padding: 2rem;
+  margin: 0 10rem;
+  margin-top: -4rem;
+}
+.linkInput{
+  width: 80%;
+}
+
+.linkDiv .btn{
+  width: 20%;
+}
+
+.xyzz{
+  margin:  0 10rem;
+}
+
+.outPutBox{
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.shortLink{
+  margin-left: auto;
+}
+
+
+.flexwrap{
+  margin:10rem;
+
+  font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.flexwrap > p {
+  max-width: 40ch;
+}
+
+
+
+
+
+.stats{
+margin: 4rem 10rem;
+
+  grid-template-columns: repeat(3,30%);
+  grid-template-rows: none;
+
+  text-align: start;
+  padding: 0;
+}
+
+.stat > img {
+  left: 10%;
+}
+
+.stat{
+  max-height: 20rem;
+
+}
+
+
+
+.detailedRecords{
+  margin-top: 4rem;
+}
+
+.customizable{
+  margin-top: 8rem;
+}
+
+
+.boostDiv{
+  background: url(./assets/images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-color: var(--pri-dark-violet);
+}
+
+.boostDiv > h3{
+  font-size: 3rem;
+}
+
+
+
+
+footer{
+  flex-direction: row;
+align-items: baseline;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.flex-Div{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-Div > div {
+  margin: 0 3rem ;
+}
+
+}
+
+
+
+/**********/
+/* Hover */
+
+li:hover{
+  cursor: pointer;
+  border-bottom: 1px solid gold;
+}
+
+.btn:hover{
+  background-color: rgb(157, 246, 246);
+}
+
+a{
+  text-decoration: none;
+  color: var(--neu-gray);
+}
