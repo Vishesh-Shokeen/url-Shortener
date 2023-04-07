@@ -83,7 +83,7 @@ export default function MainPage() {
                     </div>
 
                     <picture>
-                        <img src="\src\assets\images\illustration-working.svg" alt="" />
+                        <img src="\images\illustration-working.svg" alt="" />
                     </picture>
                 </div>
 
