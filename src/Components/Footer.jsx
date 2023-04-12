@@ -31,10 +31,10 @@ export default function Footer() {
 
                 </div>
                 <div className="iconDiv">
-                    <img src="src/assets/images/icon-facebook.svg" alt="fb" />
-                    <img src="src/assets/images/icon-twitter.svg" alt="twitter" />
-                    <img src="src/assets/images/icon-pinterest.svg" alt="pinterset"/>
-                    <img src="src/assets/images/icon-instagram.svg" alt="insta" />
+                    <img src="./src/assets/images/icon-facebook.svg" alt="fb" />
+                    <img src="./src/assets/images/icon-twitter.svg" alt="twitter" />
+                    <img src="./src/assets/images/icon-pinterest.svg" alt="pinterset"/>
+                    <img src="./src/assets/images/icon-instagram.svg" alt="insta" />
                 </div>
             </footer>
         </>
