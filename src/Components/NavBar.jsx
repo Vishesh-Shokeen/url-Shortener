@@ -11,7 +11,7 @@ export default function NavBar() {
 
     return (
         <header className="header">
-            <img src="./src\assets\images\logo.svg" alt="logo" />
+            <img src="./src/assets/images/logo.svg" alt="logo" />
             <nav className="nav">
                 <ul>
                     <li><a href="#Features"> Features</a></li>
